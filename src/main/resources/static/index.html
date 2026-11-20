@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Siren Alert LA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Siren Alert LA</h1>
+
+<h2>Brandalarm</h2>
+<p>Sirener inden for 10 km af branden bliver aktiveret.</p>
+<label>Latitude <input type="number" id="fireLatitude" step="any"></label>
+<label>Longitude <input type="number" id="fireLongitude" step="any"></label>
+<button id="reportFireButton">Opret brand</button>
+
+<h2>Aktive brande</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Tidspunkt</th>
+        <th>Lukket</th>
+        <th>Sirener</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id="fireRows"></tbody>
+</table>
+
+<h2>Sirener</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Navn</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Status</th>
+        <th>Ude af drift</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id="sirenRows"></tbody>
+</table>
+
+<h3>Opret eller rediger sirene</h3>
+<input type="hidden" id="sirenId">
+<label>Navn <input type="text" id="sirenName"></label>
+<label>Latitude <input type="number" id="sirenLatitude" step="any"></label>
+<label>Longitude <input type="number" id="sirenLongitude" step="any"></label>
+<label><input type="checkbox" id="sirenDisabled"> Ude af drift</label>
+<button id="saveSirenButton">Gem sirene</button>
+
+<script src="app.js"></script>
+</body>
+</html>
